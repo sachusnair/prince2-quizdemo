@@ -1,0 +1,291 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  color: #1f2a44;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 40px;
+}
+
+.app__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.app__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4b6aa6;
+  margin: 0 0 8px;
+}
+
+.app__subhead {
+  margin: 8px 0 0;
+  color: #4a5675;
+  max-width: 520px;
+}
+
+.app__status {
+  min-width: 240px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #e7edff;
+  color: #2a3a63;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(25, 42, 70, 0.08);
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.mode-card {
+  border: 1px solid #d7deef;
+  border-radius: 16px;
+  padding: 18px 20px;
+  background: #f8faff;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(25, 42, 70, 0.12);
+}
+
+.mode-card__title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.mode-card__meta {
+  color: #5a6785;
+  font-size: 0.9rem;
+}
+
+.command-row {
+  margin-top: 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.command-row__input {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccd6ec;
+  font-size: 0.95rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.primary {
+  background: #2f5bff;
+  color: #fff;
+}
+
+.secondary {
+  background: #eef1fb;
+  color: #2f3d62;
+}
+
+.muted {
+  color: #5b6784;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.question-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.question-meta {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  color: #5f6d8b;
+}
+
+.question-topic {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  color: #4b6aa6;
+  font-weight: 600;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.option {
+  border: 1px solid #d7deef;
+  border-radius: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #fbfcff;
+}
+
+.option input {
+  margin-top: 3px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #f1f5ff;
+  border: 1px solid #d7e0ff;
+  color: #23345b;
+}
+
+.feedback.correct {
+  background: #e8f7ee;
+  border-color: #c8ebd5;
+}
+
+.feedback.incorrect {
+  background: #fff1f1;
+  border-color: #ffd0d0;
+}
+
+.progress {
+  background: #eef1fb;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  color: #2f3d62;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin: 20px 0 30px;
+}
+
+.summary-card {
+  background: #f6f8ff;
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.summary-label {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #546281;
+}
+
+.summary-value {
+  margin: 6px 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.review {
+  display: grid;
+  gap: 16px;
+}
+
+.review-item {
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #d7deef;
+  background: #fbfcff;
+}
+
+.review-item h3 {
+  margin-top: 0;
+}
+
+.review-meta {
+  font-size: 0.85rem;
+  color: #4b6aa6;
+  margin-bottom: 10px;
+}
+
+.app__footer {
+  padding: 20px 24px 32px;
+  background: #eef1fb;
+  color: #4b5672;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.app__footer p {
+  margin: 6px 0;
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 24px 16px 32px;
+  }
+
+  .command-row__input {
+    flex-direction: column;
+  }
+
+  .app__status {
+    width: 100%;
+  }
+}

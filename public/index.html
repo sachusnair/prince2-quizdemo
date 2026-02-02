@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRINCE2 Quiz Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__eyebrow">Unofficial PRINCE2 Practice</p>
+          <h1>PRINCE2 Exam Practice Platform</h1>
+          <p class="app__subhead">
+            Simulate real exam conditions, reinforce learning with rationales, and track weaknesses
+            across each session.
+          </p>
+        </div>
+        <div class="app__status" id="sessionStatus"></div>
+      </header>
+
+      <main id="mainContent">
+        <section class="card" id="homeView">
+          <h2>Choose a Test Mode</h2>
+          <p class="muted">
+            Your question bank is consolidated across source PDFs, deduplicated, and labeled with
+            topics and rationale metadata.
+          </p>
+          <div class="mode-grid">
+            <button class="mode-card" data-mode="practice">
+              <span class="mode-card__title">Daily Practice Test</span>
+              <span class="mode-card__meta">20 questions · Immediate feedback</span>
+            </button>
+            <button class="mode-card" data-mode="mock">
+              <span class="mode-card__title">Mock Test</span>
+              <span class="mode-card__meta">60 questions · 60 minute timer</span>
+            </button>
+          </div>
+          <div class="command-row">
+            <label for="commandInput">Command override</label>
+            <div class="command-row__input">
+              <input
+                id="commandInput"
+                type="text"
+                placeholder="Type 'mixed revision' to allow full-bank random selection"
+              />
+              <button id="applyCommand" class="secondary">Apply</button>
+            </div>
+            <p class="muted" id="commandStatus">Mixed revision is currently <strong>disabled</strong>.</p>
+          </div>
+        </section>
+
+        <section class="card hidden" id="questionView">
+          <div class="question-header">
+            <div>
+              <p class="question-meta" id="questionMeta"></p>
+              <h2 id="questionText"></h2>
+              <p class="question-topic" id="questionTopic"></p>
+            </div>
+            <div class="progress" id="progressIndicator"></div>
+          </div>
+          <div class="options" id="optionsList"></div>
+          <div class="actions">
+            <button id="submitAnswer" class="primary" disabled>Submit Answer</button>
+            <button id="nextQuestion" class="secondary hidden">Next Question</button>
+            <button id="finishTest" class="secondary hidden">Finish Test</button>
+          </div>
+          <div class="feedback hidden" id="feedbackPanel"></div>
+        </section>
+
+        <section class="card hidden" id="summaryView">
+          <h2 id="summaryTitle"></h2>
+          <div class="summary-grid">
+            <div class="summary-card">
+              <p class="summary-label">Score</p>
+              <p class="summary-value" id="summaryScore"></p>
+            </div>
+            <div class="summary-card">
+              <p class="summary-label">Accuracy</p>
+              <p class="summary-value" id="summaryAccuracy"></p>
+            </div>
+            <div class="summary-card">
+              <p class="summary-label">Attempted</p>
+              <p class="summary-value" id="summaryAttempted"></p>
+            </div>
+            <div class="summary-card">
+              <p class="summary-label">Weak Topics</p>
+              <div class="summary-value" id="summaryWeakTopics"></div>
+            </div>
+          </div>
+          <div class="review" id="reviewList"></div>
+          <button id="returnHome" class="primary">Return Home</button>
+        </section>
+      </main>
+    </div>
+
+    <footer class="app__footer">
+      <p>
+        Tip: Answers marked ambiguous are shown with both interpretations and are not scored for or
+        against you.
+      </p>
+      <p>
+        This is an independent, unofficial PRINCE2 practice tool and is not affiliated with or
+        endorsed by AXELOS or PeopleCert.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
